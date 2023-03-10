@@ -1,0 +1,27 @@
+# Config file for snakemake RNA_seq.smk
+# software
+software:
+  hisat2: "/public/home/daijichen/00_biosoft/hisat2-2.1.0/hisat2"
+  stringtie: "/public/home/daijichen/00_biosoft/stringtie-2.0.4.Linux_x86_64/stringtie"
+  samtools: "/public/home/daijichen/anaconda3/envs/base-analysis/bin/samtools"
+
+# reference genome
+genome: "/public/home/daijichen/01_workdir/03_panPRR/01_reannotatin/01_data/genome/Solanum_candolleanumC400.fa"
+
+# raw data
+RNAseq_path: "/public/home/daijichen/02_data/02_RNA/potato/02_RNA_seq_data_potato_genome/C400/"
+
+# reference gft
+gtfpath: "/public/home/daijichen/01_workdir/03_panPRR/01_reannotatin/01_data/genome/Solanum_candolleanumC400.integratedNLR.gff3"
+
+# output prefix
+outputname: "C400"
+
+# According to the unsure of the hisat2-build,
+# highly recommand to build the index for your genome
+# or do not use this pipline
+# index="/path/2/your/index/"
+indexp: "/public/home/daijichen/01_workdir/03_panPRR/01_reannotatin/02_maker/01_RNA-seq/{outputname}.hisat2.index"
+
+# Threads to use
+THREADS: 12
