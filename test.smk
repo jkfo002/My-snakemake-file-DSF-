@@ -28,3 +28,4 @@ rule A:
 # document: https://snakemake.readthedocs.io/en/stable/index.html
 # {wildcards.wildcards_name} 仅用于shell：https://endrebak.gitbooks.io/the-snakemake-book/content/chapters/wildcards/wildcards.html
 # this is a test
+# this is a test
