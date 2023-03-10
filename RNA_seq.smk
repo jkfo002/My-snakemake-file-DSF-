@@ -91,11 +91,11 @@ rule Stringtie_merge:
     input:
         list="merge.list"
     output:
-        outgft="StringTie_merged.gtf"
+        "StringTie_merged.gtf"
     params:
         refgtf=gtfpath
     shell:
-        "{stringtie} --merge -G {params.refgtf} -F 0.1 -T 0.1 -i -o {output.outgtf} {input.list}"
+        "{stringtie} --merge -G {params.refgtf} -F 0.1 -T 0.1 -i -o {output} {input.list}"
 
 rule r2_Stringtie:
     input: 
